@@ -12,9 +12,9 @@ abstract class AbsSort {
 
     fun run() {
         val source = IntArray(10) { Random.nextInt(20) }
-        println("array before sort:${source.contentToString()}")
+        println("array before sorted:${source.contentToString()}")
         sort(source)
-        println("array after sort:${source.contentToString()}")
+        println("array after sorted:${source.contentToString()}")
     }
 
 }
