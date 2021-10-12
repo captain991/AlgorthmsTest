@@ -17,10 +17,6 @@ class ExampleUnitTest {
 
     @Test
     fun sortArray() {
-        object : AbsSort() {
-            override fun sort(array: IntArray) {
-
-            }
-        }.run()
+        BubbleSort().start()
     }
 }
