@@ -11,10 +11,25 @@ abstract class AbsSort {
     abstract fun sort(array: IntArray)
 
     fun start() {
-        val source = IntArray(10) { Random.nextInt(20) }
-        println("array before sorted:${source.contentToString()}")
+        start(10)
+    }
+
+    fun start(size: Int) {
+        val source = IntArray(size) { Random.nextInt(size / 2) }
+        start(source)
+    }
+
+    fun start(source: IntArray) {
+        val t1 = System.currentTimeMillis()
+        val size = source.size
+//        if (size < 20)
+            println("array before sorted:${source.contentToString()}")
+        println("time before sort:${t1}")
         sort(source)
-        println("array after sorted:${source.contentToString()}")
+        val t2 = System.currentTimeMillis()
+//        if (size < 20)
+            println("array after sorted:${source.contentToString()}")
+        println("time after sort:${t2},consumed:${t2 - t1}")
     }
 
     fun swap(array: IntArray, i: Int, j: Int) {
