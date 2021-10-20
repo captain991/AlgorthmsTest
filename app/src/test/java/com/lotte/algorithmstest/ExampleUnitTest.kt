@@ -17,6 +17,6 @@ class ExampleUnitTest {
 
     @Test
     fun sortArray() {
-        BubbleSort().start(10000)
+        BubbleSort().start()
     }
 }
